@@ -9,12 +9,14 @@ public class PlayerData
 	public List<ICard> CardsInHand { get; } = [];
 	public PlayerStatus PlayerStatus { get; set; }
 	private int Points { get; set; }
+	public bool PlayerTurn { get; set; }
 
 	public PlayerData(IPlayer player)
 	{
 		Player = player;
 		CardsInHand = [];
-		PlayerStatus = PlayerStatus.Active;
+		PlayerStatus = PlayerStatus.Inactive;
 		Points = 0;
+		PlayerTurn = false;
 	}
 }

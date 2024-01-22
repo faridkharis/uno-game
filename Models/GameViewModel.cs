@@ -1,3 +1,4 @@
+using UnoGame.Models.Enum;
 using UnoGame.Models.Interface;
 
 namespace UnoGame.Models;
@@ -9,4 +10,6 @@ public class GameViewModel
 	public int DiscardCardCount { get; set; }
 	public int StockPileCount { get; set; }
 	public Direction Direction { get; set; }
+	public PlayerStatus PlayerStatus { get; set; }
+	// public required PlayerData CurrentPlayerTurn { get; set; }
 }

@@ -31,7 +31,9 @@ public class HomeController : Controller
 			InitialDiscardCard = gameController.discardPile.Last(),
 			DiscardCardCount = gameController.discardPile.Count,
 			StockPileCount = gameController.stockPile.Count,
-			Direction = gameController.Direction
+			Direction = gameController.currentDirecton,
+			PlayerStatus = gameController.playerStatusActive,
+			// CurrentPlayerTurn = gameController.
 		};
 
 		return View("GameBoard", viewModel);

@@ -5,8 +5,17 @@
 }
 
 <h2 style="text-align: center;">UNO Game Board</h2>
-<h5 style="text-align: center;">Direction : @Model.Direction</h5>
-<h5 style="text-align: center; margin-bottom: 20px;">Player ...'s Turn</h5>
+<p style="text-align: center; margin-bottom: 0;">Direction : @Model.Direction</p>
+<p style="text-align: center;">
+  @foreach (var playerData in Model.PlayerDatas.Values)
+  {
+    if (playerData.PlayerStatus == Model.PlayerStatus)
+    {
+      <span>Current Turn : </span>
+      @playerData.Player.Name
+    }
+  }
+</p>
 <div>
   <div style="display: flex; justify-content: space-between; margin-bottom: 40px;">
     <div>
@@ -35,7 +44,8 @@
     @foreach (var playerData in Model.PlayerDatas.Values)
     {
       <div>
-        <h3>@playerData.Player.Name's Hand :</h3>
+        <p style="margin-bottom: 0;">PlayerStatus : @playerData.PlayerStatus</p>
+        <h5>@playerData.Player.Name's Hand :</h5>
         <ul style="list-style-type: none; padding: 0;">
           @foreach (var card in playerData.CardsInHand)
           {

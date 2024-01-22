@@ -14,6 +14,8 @@ public class GameController
 	public Direction Direction { get; private set; }
 	public List<ICard> stockPile = [];
 	public List<ICard> discardPile = [];
+	public PlayerStatus playerStatusActive = PlayerStatus.Active;
+	public Direction currentDirecton = Direction.Clockwise;
 
 	// Constructor
 	public GameController(int numberOfPlayers)
@@ -22,7 +24,7 @@ public class GameController
 		PlayerDatas = new Dictionary<IPlayer, PlayerData>();
 		Cards = [];
 		Players = [];
-		Direction = Direction.Clockwise;
+		// Direction = Direction.Clockwise;
 	}
 
 	// Methods
@@ -43,6 +45,22 @@ public class GameController
 			PlayerData playerData = new(player);
 			PlayerDatas.Add(player, playerData);
 		}
+
+		// Set the first player's status to Active and others to Inactive
+
+		// var firstPlayer = PlayerDatas.Values.ToList();
+		// firstPlayer[random.Next(firstPlayer.Count)].PlayerStatus = PlayerStatus.Active;
+
+		Random random = new();
+		int index = random.Next(PlayerDatas.Count);
+		var firstPlayer = PlayerDatas.ElementAt(index).Value;
+		firstPlayer.PlayerStatus = PlayerStatus.Active;
+
+		foreach (var playerData in PlayerDatas.Values.Where(p => p != firstPlayer))
+		{
+			playerData.PlayerStatus = PlayerStatus.Inactive;
+		}
+
 	}
 	public List<ICard> GenerateCards()
 	{

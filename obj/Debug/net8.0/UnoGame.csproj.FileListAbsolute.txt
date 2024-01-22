@@ -34,3 +34,4 @@ D:\PROJECTS\Formulatrix\Projects\UnoGame\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\PROJECTS\Formulatrix\Projects\UnoGame\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\PROJECTS\Formulatrix\Projects\UnoGame\obj\Debug\net8.0\UnoGame.csproj.AssemblyReference.cache
 D:\PROJECTS\Formulatrix\Projects\UnoGame\obj\Debug\net8.0\UnoGame.csproj.CopyComplete
+D:\PROJECTS\Formulatrix\Projects\UnoGame\obj\Debug\net8.0\UnoGame.sourcelink.json
