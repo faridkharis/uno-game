@@ -1,0 +1,18 @@
+﻿<!-- Views/Home/Index.cshtml -->
+
+@{
+  ViewData["Title"] = "Home";
+}
+
+<h1>Welcome to UNO Game</h1>
+
+<form asp-controller="Home" asp-action="StartGame" method="post">
+  <label for="numberOfPlayers">Choose the number of players:</label>
+  <select name="numberOfPlayers" id="numberOfPlayers">
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <!-- Add options for other numbers of players if needed -->
+  </select>
+  <button type="submit">Start Game</button>
+</form>
