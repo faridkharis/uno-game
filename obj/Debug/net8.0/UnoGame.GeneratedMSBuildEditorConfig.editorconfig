@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\PROJECTS\Formulatrix\Projects\UnoGame
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/PROJECTS/Formulatrix/Projects/UnoGame/Views/Game/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/PROJECTS/Formulatrix/Projects/UnoGame/Views/Home/GameBoard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW1lQm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

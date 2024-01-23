@@ -19,22 +19,24 @@
 <div>
   <div style="display: flex; justify-content: space-between; margin-bottom: 40px;">
     <div>
-      <h3>Say UNO :</h3>
+      <h5>Say UNO :</h5>
       <button>
         <span>UNO!</span>
       </button>
     </div>
     <div>
-      <h3>Deal Cards :</h3>
+      <h5>DisCards :</h5>
       <button>
-        <span>@Model.InitialDiscardCard.CardColor</span> - <span>@Model.InitialDiscardCard.CardValue</span>
+        <span>@Model.InitialDiscardCard.CardColor - </span>
+        <span>@Model.InitialDiscardCard.CardValue</span>
+        <span>(id: @Model.InitialDiscardCard.CardId)</span>
       </button>
       <button>
         <span>@Model.DiscardCardCount</span>
       </button>
     </div>
     <div>
-      <h3>Stock Pile :</h3>
+      <h5>Stock Pile :</h5>
       <button>
         @Model.StockPileCount
       </button>
@@ -50,9 +52,12 @@
           @foreach (var card in playerData.CardsInHand)
           {
             <li style="margin-bottom: 3px;">
-              <button>
-                <span>@card.CardColor</span> - <span>@card.CardValue</span>
-              </button>
+              <form asp-page-handler="PlayCard" method="post">
+                <button>
+                  <span>@card.CardColor</span> - <span>@card.CardValue</span>
+                  <span>(id: @card.CardId)</span>
+                </button>
+              </form>
             </li>
           }
         </ul>

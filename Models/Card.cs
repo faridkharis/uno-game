@@ -5,13 +5,14 @@ namespace UnoGame.Models;
 
 public class Card : ICard
 {
-	public int Id { get; }
+	public int CardId { get; private set; }
 	public CardColor CardColor { get; private set; }
 	public CardValue CardValue { get; private set; }
 	public CardEffect CardEffect { get; private set; }
 
-	public Card(CardColor cardCcolor, CardValue cardValue, CardEffect cardEffect)
+	public Card(int cardId, CardColor cardCcolor, CardValue cardValue, CardEffect cardEffect)
 	{
+		CardId = cardId;
 		CardColor = cardCcolor;
 		CardValue = cardValue;
 		CardEffect = cardEffect;
